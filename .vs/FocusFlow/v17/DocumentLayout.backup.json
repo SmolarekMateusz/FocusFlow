@@ -3,27 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|c:\\users\\asus\\desktop\\focusflow\\focusflow\\models\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|solutionrelative:focusflow\\models\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|c:\\users\\asus\\desktop\\focusflow\\focusflow\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|solutionrelative:focusflow\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|c:\\users\\asus\\desktop\\focusflow\\focusflow\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|solutionrelative:focusflow\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|c:\\users\\asus\\desktop\\focusflow\\focusflow\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|C:\\Users\\ASUS\\Desktop\\FocusFlow\\focusflow\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|solutionrelative:focusflow\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|C:\\Users\\ASUS\\Desktop\\FocusFlow\\focusflow\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|solutionrelative:focusflow\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|c:\\users\\asus\\desktop\\focusflow\\focusflow\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|solutionrelative:focusflow\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\ToDoApp\\ToDoApp\\ToDoApp\\Model\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|C:\\Users\\ASUS\\Desktop\\FocusFlow\\focusflow\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|solutionrelative:focusflow\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|c:\\users\\asus\\desktop\\focusflow\\focusflow\\helpers\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB138704-3624-442E-961E-D21B31DB3036}|FocusFlow\\FocusFlow.csproj|solutionrelative:focusflow\\helpers\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,15 +46,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Tasks.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Models\\Tasks.cs",
-              "RelativeDocumentMoniker": "FocusFlow\\Models\\Tasks.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Models\\Tasks.cs",
-              "RelativeToolTip": "FocusFlow\\Models\\Tasks.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Helpers\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "FocusFlow\\Helpers\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Helpers\\ViewModelBase.cs",
+              "RelativeToolTip": "FocusFlow\\Helpers\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T07:58:14.525Z",
+              "WhenOpened": "2026-05-20T12:37:27.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\App.xaml",
+              "RelativeDocumentMoniker": "FocusFlow\\App.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\App.xaml",
+              "RelativeToolTip": "FocusFlow\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-20T11:44:51.256Z",
               "EditorCaption": ""
             },
             {
@@ -68,52 +77,14 @@
               "RelativeDocumentMoniker": "FocusFlow\\ViewModels\\MainWindowViewModel.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "FocusFlow\\ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwEoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-20T07:50:54.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "FocusFlow\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "FocusFlow\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T07:49:29.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\App.xaml",
-              "RelativeDocumentMoniker": "FocusFlow\\App.xaml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\App.xaml",
-              "RelativeToolTip": "FocusFlow\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-20T07:48:45.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ToDoApp\\ToDoApp\\ToDoApp\\Model\\User.cs",
-              "RelativeDocumentMoniker": "..\\ToDoApp\\ToDoApp\\ToDoApp\\Model\\User.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ToDoApp\\ToDoApp\\ToDoApp\\Model\\User.cs",
-              "RelativeToolTip": "..\\ToDoApp\\ToDoApp\\ToDoApp\\Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T07:36:14.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "FocusFlow\\Views\\MainWindow.xaml",
@@ -121,6 +92,19 @@
               "RelativeToolTip": "FocusFlow\\Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-20T07:34:45.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FocusFlow\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\FocusFlow\\FocusFlow\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "FocusFlow\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T07:49:29.013Z",
               "EditorCaption": ""
             }
           ]

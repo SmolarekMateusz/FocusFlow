@@ -13,18 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FocusFlow.ViewModels;
+using MahApps.Metro.Controls;
 
 namespace FocusFlow
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = new MainWindowViewModel(this);
+            TimeSpan timer = new TimeSpan(0,25,0);
+            
         }
     }
 }

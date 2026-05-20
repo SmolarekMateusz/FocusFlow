@@ -1,12 +1,68 @@
-﻿<Window x:Class="FocusFlow.MainWindow"
+﻿<mah:MetroWindow x:Class="FocusFlow.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FocusFlow"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"         
         mc:Ignorable="d"
-        Title="FocusFlow" Height="450" Width="800">
+        Title="FocusFlow" Height="500" Width="800" Background="{StaticResource BackgroundColor}">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Text="Tasks For Today" Foreground="{StaticResource TextColor}" FontSize="20"/>
+        <Border Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" Margin="10" Padding="5" Background="{StaticResource CardsColor}" CornerRadius="10">
+            <ScrollViewer Background="{StaticResource CardsColor}" x:Name="TaskList" DataContext="{}">
+            
+            </ScrollViewer>
+        </Border>
+        <Button Grid.Column="0" Grid.Row="5" Content="Add Task" Foreground="{StaticResource TextColor}" Margin="10" BorderBrush="{StaticResource HoverColor}" BorderThickness="1.5" Background="{StaticResource PrimaryColor}" Command="{Binding AddTaskCommand}">
+            <Button.Resources>
+
+                <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#16A34A"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="#16A34A"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Gray7" Color="#22C55E"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Gray8" Color="#16A34A"/>
+
+            </Button.Resources>
+        </Button>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10" FontSize="100" Text="{Binding FormattedTime}" Foreground="{StaticResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="1" Grid.Column="4" Margin="10">
+            <Button Height="60" Background="{StaticResource BackgroundColor}" BorderBrush="{StaticResource BackgroundColor}">
+                <Button.Resources>
+
+                    <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#27272A"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="#27272A"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Gray7" Color="#2f2f33"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Gray8" Color="#18181B"/>
+
+                </Button.Resources>
+                <Image Source="/Reasources/arrowUp.png"/>
+            </Button>
+            <Button Height="60" Background="{StaticResource BackgroundColor}" BorderBrush="{StaticResource BackgroundColor}">
+                <Button.Resources>
+
+                    <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#27272A"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="#27272A"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Gray7" Color="#2f2f33"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Gray8" Color="#18181B"/>
+
+                </Button.Resources>
+                <Image Source="/Reasources/arrowDown.png"/>
+            </Button>
+        </StackPanel>
     </Grid>
-</Window>
+</mah:MetroWindow>

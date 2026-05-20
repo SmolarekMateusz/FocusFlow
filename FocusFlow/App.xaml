@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:FocusFlow"
              StartupUri="./Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <!-- Theme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Emerald.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="BackgroundColor" Color="#18181B"/>
+            <SolidColorBrush x:Key="TextColor" Color="#efefef"/>
+            <SolidColorBrush x:Key="CardsColor" Color="#27272A"/>
+            <SolidColorBrush x:Key="CardsHoverColor" Color="#434347"/>
+            <SolidColorBrush x:Key="PrimaryColor" Color="#22C55E"/>
+            <SolidColorBrush x:Key="HoverColor" Color="#16A34A"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

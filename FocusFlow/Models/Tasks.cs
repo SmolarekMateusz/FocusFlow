@@ -10,7 +10,7 @@ namespace FocusFlow.Models
     public class Tasks
     {
         public String Title { get; set; }
-        public bool TaskStatus { get; set; } = false;
+        public bool IsComplete { get; set; } = false;
     }
 
 }
