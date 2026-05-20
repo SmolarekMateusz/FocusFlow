@@ -26,7 +26,6 @@ namespace FocusFlow
         {
             InitializeComponent();
             this.DataContext = new MainWindowViewModel(this);
-            TimeSpan timer = new TimeSpan(0,25,0);
             
         }
     }
