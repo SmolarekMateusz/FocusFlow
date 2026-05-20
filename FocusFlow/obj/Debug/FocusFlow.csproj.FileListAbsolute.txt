@@ -1,0 +1,15 @@
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\bin\Debug\FocusFlow.exe.config
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\bin\Debug\FocusFlow.exe
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\bin\Debug\FocusFlow.pdb
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\ViewModels\MainWindow.g.cs
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\App.g.cs
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow_MarkupCompile.cache
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow_MarkupCompile.lref
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\ViewModels\MainWindow.baml
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow.g.resources
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow.Properties.Resources.resources
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow.exe
+C:\Users\ASUS\Desktop\FocusFlow\FocusFlow\obj\Debug\FocusFlow.pdb
