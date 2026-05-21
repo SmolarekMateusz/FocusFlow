@@ -70,11 +70,8 @@ namespace FocusFlow.ViewModels
             this.mainWindow = mainWindow;
             
             _setedTime = 25;
-            TimeLeft = TimeSpan.FromMinutes(_setedTime);
 
-            _timer = new DispatcherTimer();
-            _timer.Interval = TimeSpan.FromSeconds(1);
-            _timer.Tick += TimerTick;
+            SetupTimer();
 
             AddTaskCommand = new RelayCommand(AddTask);
             StartTimerCommand = new RelayCommand(StartTimer);
@@ -94,11 +91,39 @@ namespace FocusFlow.ViewModels
         }
 
         private void AddTask(object obj) { }
-        private void StartTimer(object obj) { }
-        private void StopTimer(object obj) { }
-        private void ResetTimer(object obj) { }
-        private void TurnUpTimer(object obj) { }
-        private void TurnDownTimer(object obj) { }
+        private void StartTimer(object obj) {
+            _timer.Start();
+        }
+        private void StopTimer(object obj) {
+            _timer.Stop();
+        }
+        private void ResetTimer(object obj) {
+            _timer.Stop();
+            SetupTimer();
+        }
+        private void TurnUpTimer(object obj) {
+            if (!_timer.IsEnabled)
+            {
+                _setedTime += 1;
+                SetupTimer();
+            }
+        }
+        private void TurnDownTimer(object obj) {
+            if (!_timer.IsEnabled && _setedTime > 0)
+            {
+                _setedTime -= 1;
+                SetupTimer();
+            }
+        }
         private void RemoveTask(object obj) { }
+
+        private void SetupTimer()
+        {
+            TimeLeft = TimeSpan.FromMinutes(_setedTime);
+
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromSeconds(1);
+            _timer.Tick += TimerTick;
+        }
     }
 }

@@ -41,7 +41,7 @@
 
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10" FontSize="100" Text="{Binding FormattedTime}" Foreground="{StaticResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <StackPanel Grid.Row="1" Grid.Column="4" Margin="10">
-            <Button Height="60" Background="{StaticResource BackgroundColor}" BorderBrush="{StaticResource BackgroundColor}">
+            <Button Height="60" Background="{StaticResource BackgroundColor}" BorderBrush="{StaticResource BackgroundColor}" Command="{Binding TurnUpTimerCommand}">
                 <Button.Resources>
 
                     <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#27272A"/>
@@ -52,7 +52,7 @@
                 </Button.Resources>
                 <Image Source="/Reasources/arrowUp.png"/>
             </Button>
-            <Button Height="60" Background="{StaticResource BackgroundColor}" BorderBrush="{StaticResource BackgroundColor}">
+            <Button Height="60" Background="{StaticResource BackgroundColor}" BorderBrush="{StaticResource BackgroundColor}" Command="{Binding TurnDownTimerCommand}">
                 <Button.Resources>
 
                     <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#27272A"/>
@@ -64,5 +64,51 @@
                 <Image Source="/Reasources/arrowDown.png"/>
             </Button>
         </StackPanel>
+
+        <Button Grid.Column="1" Grid.Row="2" Content="Start" Foreground="{StaticResource TextColor}" Margin="10" BorderBrush="{StaticResource HoverColor}" BorderThickness="1.5" Background="{StaticResource PrimaryColor}" Command="{Binding StartTimerCommand}">
+            <Button.Resources>
+
+                <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#16A34A"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="#16A34A"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Gray7" Color="#22C55E"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Gray8" Color="#16A34A"/>
+
+            </Button.Resources>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="2" Content="Stop" Foreground="{StaticResource TextColor}" Margin="10" BorderBrush="{StaticResource HoverColor}" BorderThickness="1.5" Background="{StaticResource PrimaryColor}" Command="{Binding StopTimerCommand}">
+            <Button.Resources>
+
+                <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#16A34A"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="#16A34A"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Gray7" Color="#22C55E"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Gray8" Color="#16A34A"/>
+
+            </Button.Resources>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="2" Content="Reset" Foreground="{StaticResource TextColor}" Margin="10" BorderBrush="{StaticResource HoverColor}" BorderThickness="1.5" Background="{StaticResource PrimaryColor}" Command="{Binding ResetTimerCommand}">
+            <Button.Resources>
+
+                <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#16A34A"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="#16A34A"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Gray7" Color="#22C55E"/>
+                <SolidColorBrush x:Key="MahApps.Brushes.Gray8" Color="#16A34A"/>
+
+            </Button.Resources>
+        </Button>
+        <Border Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" Margin="10" Padding="5" Background="{StaticResource CardsColor}" CornerRadius="10">
+            <StackPanel>
+                <TextBlock Text="This Sprint" Foreground="{StaticResource TextColor}" FontSize="20"/>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="2" Grid.Row="3" Grid.RowSpan="2" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" Margin="10" Padding="5" Background="{StaticResource CardsColor}" CornerRadius="10">
+            <StackPanel>
+                <TextBlock Text="Today" Foreground="{StaticResource TextColor}" FontSize="20"/>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" Margin="10" Padding="5" Background="{StaticResource CardsColor}" CornerRadius="10">
+            <StackPanel>
+                <TextBlock Text="This Month" Foreground="{StaticResource TextColor}" FontSize="20"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </mah:MetroWindow>
