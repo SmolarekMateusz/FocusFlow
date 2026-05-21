@@ -6,13 +6,21 @@
         xmlns:local="clr-namespace:FocusFlow.Views"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"     
         mc:Ignorable="d"
-        Title="FocusFlow" Height="200" Width="250" Background="{StaticResource BackgroundColor}">
+        Title="FocusFlow" Height="300" Width="250" Background="{StaticResource BackgroundColor}">
     <Grid>
         <StackPanel Margin="10">
             <TextBlock Foreground="{StaticResource TextColor}" Text="Title:" FontSize="15"/>
             <Border Margin="5" Padding="5" Background="{StaticResource CardsColor}" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" CornerRadius="10">
                 <TextBox x:Name="taskTitle"  Background="{StaticResource CardsColor}" BorderBrush="{StaticResource CardsColor}" Text="{Binding TaskTitle}">
                 </TextBox>
+            </Border>
+            <TextBlock Foreground="{StaticResource TextColor}" Text="Estimated Minutes:" FontSize="15"/>
+            <Border Margin="5" Padding="5" Background="{StaticResource CardsColor}" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" CornerRadius="10">
+                <mah:NumericUpDown
+                   Minimum="1"
+                   Maximum="999"
+                   x:Name="taskTime"  Background="{StaticResource CardsColor}" BorderBrush="{StaticResource CardsColor}"
+                   Value="{Binding EstimatedMinutes}"/>
             </Border>
             <Button Content="Create" Foreground="{StaticResource TextColor}" Margin="10" BorderBrush="{StaticResource HoverColor}" BorderThickness="1.5" Background="{StaticResource PrimaryColor}" Command="{Binding CreateTaskCommand}">
                 <Button.Resources>

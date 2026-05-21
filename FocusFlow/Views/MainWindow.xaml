@@ -24,6 +24,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Text="Tasks For Today" Foreground="{StaticResource TextColor}" FontSize="20"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" Text="Selected Task: " Foreground="{StaticResource TextColor}" FontSize="20"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" Text="{Binding SelectedTask.Title}" Foreground="{StaticResource TextColor}" FontSize="20"/>
         <Border Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" Margin="10" Padding="5" Background="{StaticResource CardsColor}" CornerRadius="10">
             <ScrollViewer Background="{StaticResource CardsColor}" x:Name="TaskList">
                 <ItemsControl ItemsSource="{Binding TasksData}">
@@ -60,8 +62,16 @@
 
 
                                 <WrapPanel Orientation="Horizontal">
+                                    <WrapPanel.InputBindings>
+
+                                      <MouseBinding MouseAction="LeftClick"
+                                      Command="{Binding DataContext.SelectTaskCommand,
+                                      RelativeSource={RelativeSource AncestorType=Window}}"
+                                      CommandParameter="{Binding}"/>
+
+                                    </WrapPanel.InputBindings>
                                     <TextBlock Text="{Binding Title}" Foreground="{StaticResource TextColor}" Margin="0 0 5 0" FontSize="20"/>
-                                    <CheckBox IsChecked="{Binding IsComplete}" Background="{StaticResource CardsColor}" BorderBrush="{StaticResource CardsHoverColor}"/>
+                                    <CheckBox IsChecked="{Binding IsComplete}" Background="{StaticResource CardsColor}" BorderBrush="{StaticResource CardsHoverColor}" IsEnabled="False"/>
                                     <Button Background="Transparent" BorderBrush="Transparent" Command="{Binding DataContext.RemoveTaskCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding}">
                                         <Button.Resources>
 

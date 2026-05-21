@@ -54,7 +54,28 @@ namespace FocusFlow.ViewModels
                 OnPropertyChanged(nameof(FormattedTime));
             }
         }
+        private Tasks _selectedTask;
 
+        public Tasks SelectedTask
+        {
+            get => _selectedTask;
+            set
+            {
+                _selectedTask = value;
+                OnPropertyChanged();
+            }
+        }
+        private bool _isSessionActive;
+
+        public bool IsSessionActive
+        {
+            get => _isSessionActive;
+            set
+            {
+                _isSessionActive = value;
+                OnPropertyChanged();
+            }
+        }
         public string FormattedTime =>
             TimeLeft.ToString(@"mm\:ss");
 
@@ -67,6 +88,7 @@ namespace FocusFlow.ViewModels
         public ICommand TurnUpTimerCommand { get; }
         public ICommand TurnDownTimerCommand { get; }
         public ICommand RemoveTaskCommand { get; }
+        public ICommand SelectTaskCommand { get;}
 
         public MainWindowViewModel(MainWindow mainWindow) { 
             this.mainWindow = mainWindow;
@@ -82,6 +104,7 @@ namespace FocusFlow.ViewModels
             TurnUpTimerCommand = new RelayCommand(TurnUpTimer);
             TurnDownTimerCommand = new RelayCommand(TurnDownTimer);
             RemoveTaskCommand = new RelayCommand(RemoveTask);
+            SelectTaskCommand = new RelayCommand(SelectTask);
 
             TasksData = new ObservableCollection<Tasks>();
             FocusSessionData = new ObservableCollection<FocusSession>();
@@ -92,26 +115,63 @@ namespace FocusFlow.ViewModels
             {
                 TimeLeft = TimeLeft.Subtract(TimeSpan.FromSeconds(1));
             }
-        }
+            else
+            {
+                _timer.Stop();
+                SelectedTask.SpentMinutes += _setedTime;
+                SelectedTask.IsCompleted();
+                IsSessionActive = false;
+                SetupTimer();
 
+            }
+        }
+        private void SelectTask(object obj)
+        {
+            if (obj is Tasks task)
+            {
+                if (!_timer.IsEnabled)
+                {
+                    SelectedTask = task;
+                }
+            }
+        }
         private void AddTask(object obj) {
             addTaskView = new AddTaskView();
             addTaskView.ShowDialog();
-
-            Tasks task = new Tasks();
-            task.Title = addTaskView.taskTitle.Text;
-
-            TasksData.Add(task);
+            if (addTaskView.taskTitle.Text.Length > 0 && addTaskView.taskTime.Value > 0 && addTaskView.taskTitle.Text != null && addTaskView.taskTime.Value != null)
+            {
+                Tasks task = new Tasks();
+                task.Title = addTaskView.taskTitle.Text;
+                task.EstimatedMinutes = (int) addTaskView.taskTime.Value;
+                TasksData.Add(task);
+            }
         }
         private void StartTimer(object obj) {
-            _timer.Start();
+            if (SelectedTask != null && !_timer.IsEnabled)
+            {
+                _timer.Start();
+                if (!_isSessionActive)
+                {
+                    IsSessionActive = true;
+                    FocusSession session = new FocusSession();
+                    session.StartedAt = DateTime.Now;
+                    session.DurationMinutes = _setedTime;
+                    session.RelatedTask = SelectedTask;
+                }
+            }
         }
         private void StopTimer(object obj) {
-            _timer.Stop();
+            if (_timer.IsEnabled)
+            {
+                _timer.Stop();
+            }
         }
         private void ResetTimer(object obj) {
             _timer.Stop();
+            SelectedTask.SpentMinutes += _setedTime - _timeLeft.Minutes;
+            SelectedTask.IsCompleted();
             SetupTimer();
+            IsSessionActive = false;
         }
         private void TurnUpTimer(object obj) {
             if (!_timer.IsEnabled)
@@ -131,6 +191,10 @@ namespace FocusFlow.ViewModels
             if (parameter is Tasks task)
             {
                 TasksData.Remove(task);
+                if (task == SelectedTask)
+                {
+                    SelectedTask = null;
+                }
             }
         }
 

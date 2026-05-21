@@ -10,6 +10,6 @@ namespace FocusFlow.Models
     {
         public DateTime StartedAt { get; set; }
         public int DurationMinutes { get; set; }
-        public int TasksCompleted { get; set; }
+        public Tasks RelatedTask { get; set; }
     }
 }
