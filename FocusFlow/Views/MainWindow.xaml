@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FocusFlow"
-        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"         
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         Title="FocusFlow" Height="500" Width="800" Background="{StaticResource BackgroundColor}">
     <Grid>
@@ -24,8 +25,66 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Text="Tasks For Today" Foreground="{StaticResource TextColor}" FontSize="20"/>
         <Border Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" Margin="10" Padding="5" Background="{StaticResource CardsColor}" CornerRadius="10">
-            <ScrollViewer Background="{StaticResource CardsColor}" x:Name="TaskList" DataContext="{}">
-            
+            <ScrollViewer Background="{StaticResource CardsColor}" x:Name="TaskList">
+                <ItemsControl ItemsSource="{Binding TasksData}">
+
+                    <ItemsControl.ItemTemplate>
+
+                        <DataTemplate>
+                            <Border Margin="5"
+        Padding="10"
+        CornerRadius="8"
+        BorderThickness="1.5">
+
+                                <Border.Style>
+
+                                    <Style TargetType="Border">
+
+                                        <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
+
+                                        <Setter Property="BorderBrush" Value="{StaticResource HoverColor}"/>
+
+                                        <Style.Triggers>
+
+                                            <Trigger Property="IsMouseOver"  Value="True">
+
+                                                <Setter Property="Background"  Value="{StaticResource HoverColor}"/>
+
+                                            </Trigger>
+
+                                        </Style.Triggers>
+
+                                    </Style>
+
+                                </Border.Style>
+
+
+                                <WrapPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Title}" Foreground="{StaticResource TextColor}" Margin="0 0 5 0" FontSize="20"/>
+                                    <CheckBox IsChecked="{Binding IsComplete}" Background="{StaticResource CardsColor}" BorderBrush="{StaticResource CardsHoverColor}"/>
+                                    <Button Background="Transparent" BorderBrush="Transparent" Command="{Binding DataContext.RemoveTaskCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding}">
+                                        <Button.Resources>
+
+                                            <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="Transparent"/>
+                                            <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="Transparent"/>
+                                            <SolidColorBrush x:Key="MahApps.Brushes.Gray7" Color="Transparent"/>
+                                            <SolidColorBrush x:Key="MahApps.Brushes.Gray8" Color="Transparent"/>
+
+                                        </Button.Resources>
+
+                                        <iconPacks:PackIconMaterial
+                                            Kind="Close"
+                                            Width="10"
+                                            Height="10"/>
+                                    </Button>
+                                </WrapPanel>
+                            </Border>
+
+                        </DataTemplate>
+
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
             </ScrollViewer>
         </Border>
         <Button Grid.Column="0" Grid.Row="5" Content="Add Task" Foreground="{StaticResource TextColor}" Margin="10" BorderBrush="{StaticResource HoverColor}" BorderThickness="1.5" Background="{StaticResource PrimaryColor}" Command="{Binding AddTaskCommand}">

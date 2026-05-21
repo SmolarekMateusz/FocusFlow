@@ -1,0 +1,29 @@
+﻿<mah:MetroWindow x:Class="FocusFlow.Views.AddTaskView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FocusFlow.Views"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"     
+        mc:Ignorable="d"
+        Title="FocusFlow" Height="200" Width="250" Background="{StaticResource BackgroundColor}">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Foreground="{StaticResource TextColor}" Text="Title:" FontSize="15"/>
+            <Border Margin="5" Padding="5" Background="{StaticResource CardsColor}" BorderBrush="{StaticResource PrimaryColor}" BorderThickness="1.5" CornerRadius="10">
+                <TextBox x:Name="taskTitle"  Background="{StaticResource CardsColor}" BorderBrush="{StaticResource CardsColor}" Text="{Binding TaskTitle}">
+                </TextBox>
+            </Border>
+            <Button Content="Create" Foreground="{StaticResource TextColor}" Margin="10" BorderBrush="{StaticResource HoverColor}" BorderThickness="1.5" Background="{StaticResource PrimaryColor}" Command="{Binding CreateTaskCommand}">
+                <Button.Resources>
+
+                    <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="#16A34A"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="#16A34A"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Gray7" Color="#22C55E"/>
+                    <SolidColorBrush x:Key="MahApps.Brushes.Gray8" Color="#16A34A"/>
+
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </Grid>
+</mah:MetroWindow>

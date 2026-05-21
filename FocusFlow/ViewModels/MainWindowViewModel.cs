@@ -1,6 +1,7 @@
 ﻿using FocusFlow.Command;
 using FocusFlow.Helpers;
 using FocusFlow.Models;
+using FocusFlow.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,6 +16,7 @@ namespace FocusFlow.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         private MainWindow mainWindow;
+        private AddTaskView addTaskView;
 
         private ObservableCollection<Tasks> _tasksData;
         public ObservableCollection<Tasks> TasksData
@@ -80,7 +82,9 @@ namespace FocusFlow.ViewModels
             TurnUpTimerCommand = new RelayCommand(TurnUpTimer);
             TurnDownTimerCommand = new RelayCommand(TurnDownTimer);
             RemoveTaskCommand = new RelayCommand(RemoveTask);
-        
+
+            TasksData = new ObservableCollection<Tasks>();
+            FocusSessionData = new ObservableCollection<FocusSession>();
         }
         private void TimerTick(object sender, EventArgs e)
         {
@@ -90,7 +94,15 @@ namespace FocusFlow.ViewModels
             }
         }
 
-        private void AddTask(object obj) { }
+        private void AddTask(object obj) {
+            addTaskView = new AddTaskView();
+            addTaskView.ShowDialog();
+
+            Tasks task = new Tasks();
+            task.Title = addTaskView.taskTitle.Text;
+
+            TasksData.Add(task);
+        }
         private void StartTimer(object obj) {
             _timer.Start();
         }
@@ -115,7 +127,12 @@ namespace FocusFlow.ViewModels
                 SetupTimer();
             }
         }
-        private void RemoveTask(object obj) { }
+        private void RemoveTask(object parameter) {
+            if (parameter is Tasks task)
+            {
+                TasksData.Remove(task);
+            }
+        }
 
         private void SetupTimer()
         {
